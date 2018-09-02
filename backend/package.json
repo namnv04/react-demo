@@ -1,0 +1,19 @@
+{
+  "name": "turner-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js app.js"
+  },
+  "author": "Nam Vuong",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
