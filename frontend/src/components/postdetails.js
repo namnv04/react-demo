@@ -19,7 +19,8 @@ class PostDetails extends Component {
   async componentWillMount () {
     try {
       const { id } = this.props.match.params
-      let res = await axios.get(`http://localhost:3000/post/${id}`)
+      let url = process.env.REACT_APP_STAGE === 'dev' ? 'http://localhost:3000' : 'https://mysterious-scrubland-94044.herokuapp.com'
+      let res = await axios.get(`${url}/post/${id}`)
       this.setState({post: res.data})
     } catch (error) {
     }
@@ -28,7 +29,8 @@ class PostDetails extends Component {
     return (
       <div className="container">
         <div className="content">
-          <h1>{this.state.post.TitleName} ({this.state.post.ReleaseYear})</h1>
+          {this.state.post.TitleName &&
+          <h1>{this.state.post.TitleName} ({this.state.post.ReleaseYear})</h1>}
 
           <h4>Storylines:</h4>
           {this.state.post.Storylines.map((item, index) => (
