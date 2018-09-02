@@ -1,0 +1,18 @@
+.container {
+  max-width: 600px;
+  margin: 30px auto 30px auto;
+}
+.content {
+  margin: 30px 0 0 0;
+}
+.list-posts {
+  margin: 30px 0 0 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.item {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  font-size: 14px;
+}
